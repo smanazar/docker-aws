@@ -8,7 +8,7 @@ rvm:
   
 services:
     - docker
-    - gem install bundler
+    - bundle install --deployment
     - gem update --system
 
 before_install:

@@ -1,0 +1,8 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker build  -t shaikm/docker-react -f Dockerfile.dev .
+
+script:
+    - docker run shaikm/docker-react npm run test -- --coverage

@@ -2,8 +2,11 @@ sudo: required
 services:
     - docker
     
+install:
+     - bundle install
+
 before_install:
-    - gem install bundler
+   
     - docker build  -t docker-react -f Dockerfile.dev .
    
 

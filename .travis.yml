@@ -6,8 +6,7 @@ rvm:
 
 services:
     - docker
-install:
-     - bundle install
+
 
 before_install:
    

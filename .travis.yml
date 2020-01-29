@@ -3,7 +3,9 @@ language: ruby
 rvm:
  - 2.3
  - jruby
-
+ gemfile:
+    - gemfiles/rails2.gemfile
+  
 services:
     - docker
     - gem install bundler

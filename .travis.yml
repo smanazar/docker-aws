@@ -6,7 +6,7 @@ rvm:
 
 services:
     - docker
-
+    - gem update --system
 
 before_install:
    

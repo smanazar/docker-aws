@@ -1,15 +1,18 @@
 sudo: required
 language: ruby
 rvm:
- - 2.2
+ - 2.3
  - jruby
 
 services:
     - docker
+    - gem install bundler
     - gem update --system
 
 before_install:
    
-    - docker build  -t docker-react -f Dockerfile.dev 
+    - docker build  -t docker-react -f Dockerfile.dev .
+   
+
 script:
     - docker run docker-react npm run test -- --coverage
